@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
+// array of objects which each representing a project
 const projectsData = [
   {
     id: 1,
@@ -52,6 +53,7 @@ const ProjectsSection = () => {
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2">
         {/* add tag button */}
+        
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 md:gap-12 p-16">
