@@ -36,11 +36,13 @@ Start the Next.js development server:
 Portfolio Demo:
 https://portfolio-hackthletes.vercel.app/
 
-https://www.npmjs.com/package/@heroicons/react - npm i @heroicons/react
+https://www.npmjs.com/package/react-simple-typewriter -```npm i react-simple-typewriter```
 
-https://www.npmjs.com/package/framer-motion - npm i framer-motion
+https://www.npmjs.com/package/@heroicons/react - ```npm i @heroicons/react```
 
-https://www.npmjs.com/package/react-icons - npm i react-icons
+https://www.npmjs.com/package/framer-motion - ```npm i framer-motion```
+
+https://www.npmjs.com/package/react-icons - ```npm i react-icons```
 
 Timeline Component:
 https://ui.aceternity.com/components/timeline
