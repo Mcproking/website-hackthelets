@@ -42,6 +42,12 @@ const projectsData = [
   },
 ];
 const ProjectsSection = () => {
+  const [selectedTag, setSelectedTag] = useState("All");
+
+  const filteredProjects =
+    selectedTag === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.tag.includes(selectedTag));
 
   return (
     <>
@@ -52,12 +58,33 @@ const ProjectsSection = () => {
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2">
-        {/* add tag button */}
-        
+        {["All", "Personal", "Hackathon"].map((tag) => (
+          <button
+            key={tag}
+            onClick={() => setSelectedTag(tag)}
+            className={`rounded-full border-2 px-6 py-3 text-xl cursor-pointer ${
+              selectedTag === tag
+                ? "border-purple-500"
+                : " border-slate-700 hover:border-white"
+            }`}
+          >
+            {tag}
+          </button>
+        ))}
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 md:gap-12 p-16">
         {/* add projects */}
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            imgUrl={project.image}
+            title={project.title}
+            description={project.description}
+            gitUrl={project.gitUrl}
+            previewUrl={project.previewUrl}
+          />
+        ))}
       </div>
     </>
   );

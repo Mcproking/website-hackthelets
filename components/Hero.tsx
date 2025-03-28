@@ -9,6 +9,7 @@ import {
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
+import { Typewriter } from "react-simple-typewriter";
 
 const COLORS_TOP = ["#13FFAA", "#ff8b43", "#0017eb", "#eb0038"];
 
@@ -42,8 +43,17 @@ const Hero = () => {
             Hey, I am
           </h1>
           <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text font-black leading-tight text-transparent text-5xl md:text-8xl">
-            Developer
-            {/* typewriter */}
+            <motion.span>
+              <Typewriter
+                words={["Shane", "Developer", "BananaYEET"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </motion.span>
           </h1>
 
           <p className="my-6 max-w-xl">
@@ -73,7 +83,13 @@ const Hero = () => {
         </div>
 
         <div className="w-[45%] flex justify-center">
-          {/* Image */}
+          <Image
+            src="/lmao.png"
+            alt="procas"
+            width={400}
+            height={400}
+            className="rounded-3xl"
+          />
         </div>
       </div>
     </motion.section>
