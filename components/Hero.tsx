@@ -10,6 +10,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 const COLORS_TOP = ["#13FFAA", "#ff8b43", "#0017eb", "#eb0038"];
 
@@ -62,14 +63,17 @@ const Hero = () => {
           </p>
 
           <div className="flex space-x-4">
-            <motion.button
-              style={{ border, boxShadow }}
-              whileHover={{ scale: 1.015 }}
-              whileTap={{ scale: 0.985 }}
-              className="flex w-fit items-center gap-2 rounded-full px-4 py-2 bg-gray-800 text-white shadow-lg"
-            >
-              Let&apos;s Connect
-            </motion.button>
+            <Link href="#contact">
+              <motion.button
+                style={{ border, boxShadow }}
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+                className="flex w-fit items-center gap-2 rounded-full px-4 py-2 bg-gray-800 text-white shadow-lg"
+              >
+                Let&apos;s Connect
+              </motion.button>
+            </Link>
+
             <motion.button
               style={{ border, boxShadow }}
               whileHover={{ scale: 1.015 }}
